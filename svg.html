@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body{
+		background: rgba(163, 167, 240, 0.5);
+	}
+	</style>
+</head>
+<body>
+	<div id="svg"></div>
+	<!-- <img src="top.svg" alt=""> -->
+	<script type="text/javascript" src="snap.svg-min.js"></script>
+	<script type="text/javascript">
+		var s = Snap("#svg");
+		Snap.load("top.svg",function(f){
+			f.select("line").attr({stroke: "#006ec3"});
+			console.log(f.select(".st6"));
+			s.append(f);
+		});
+	</script>
+</body>
+</html>
