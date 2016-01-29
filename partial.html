@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.whole-img{
+			font-size: 100px;
+			width: 100%;
+			position: relative;
+		}
+		.left{
+			background-image: url('white_code.svg');
+			height: 2em;
+			width: 2em;
+			float: left;
+			margin-top: 1em;
+			background-size: 4.4em;
+			-webkit-animation: bgLeft 4s linear infinite;
+		}
+		.right{
+			background-image: url('red_code.svg');
+			height: 2em;
+			width: 2.1em;
+			float: left;
+			margin-top: 1em;
+			background-size: 4.4em;
+			-webkit-animation: bgLeft 4s linear infinite;
+		}
+		.center{
+			float: left;
+			width: 2.68em;
+			position: relative;
+			/*background-image: url('border.svg');*/
+		}
+		.shield{
+			/*background-image: url('shield.svg');
+			height: 4.5em;
+			float: left;*/
+			width: 90%;
+			margin: auto;
+			display: block;
+			margin-top: 0.2em
+		}
+		.border{
+			position: absolute;
+			opacity: 0.4;
+			-webkit-animation: scaleBorder 0.8s ease-in-out infinite;
+		}
+		body{
+			background: rgba(163, 167, 240, 0.5);
+		}
+		@-webkit-keyframes bgLeft{
+			0% {
+				background-position: 0em;
+			}
+			100% {
+				background-position: -4.4em;
+			}
+		}
+		@-webkit-keyframes scaleBorder{
+			0%{
+				transform: scale(1);
+				opacity: 0.4;
+			}
+			100%{
+				transform: scale(1.07);
+				opacity: 0;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="whole-img">
+		<div class="left"></div>
+		<!-- <img src="border.svg" class="border"> -->
+		<div class="center">
+			<img src="border.svg" class="border">
+			<img src="shield.svg" class="shield">
+		</div>
+		<div class="right"></div>
+	</div>
+</body>
+</html>
